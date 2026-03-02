@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedSoccer Pro — Plataforma de Gestión Médica y Rendimiento para Fútbol</title>
+    <meta name="description"
+        content="MedSoccer Pro es la plataforma líder de gestión médica, fisioterapia, readaptación y análisis de rendimiento para clubes de fútbol profesional. Integración con Catapult GPS, VALD Performance y más.">
+    <meta name="keywords"
+        content="medsoccer, gestión médica fútbol, lesiones fútbol, readaptación deportiva, fisioterapia deportiva, Catapult GPS, VALD Performance, software médico deportivo">
+    <meta name="author" content="MedSoccer Pro">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MedSoccer Pro — Gestión Médica y Rendimiento para Fútbol">
+    <meta property="og:description"
+        content="La plataforma completa para servicios médicos de clubes de fútbol profesional.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/dashboard-mockup.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- AOS Animations CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ===================== NAVIGATION ===================== -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <img src="images/logo.png" alt="MedSoccer Pro Logo" class="nav-logo-img">
+                <span class="nav-logo-text">MedSoccer <span class="nav-logo-pro">Pro</span></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#features" class="nav-link">Funcionalidades</a>
+                <a href="#platform" class="nav-link">Plataforma</a>
+                <a href="#integrations" class="nav-link">Integraciones</a>
+                <a href="#pricing" class="nav-link">Precios</a>
+                <a href="#contact" class="nav-link nav-link-cta">Contactar</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <img src="images/hero-bg.png" alt="" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <img src="images/logo.png" alt="MedSoccer Pro Logo" class="hero-logo-large">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Plataforma usada por clubes profesionales
+            </div>
+            <h1 class="hero-title">
+                Gestión Médica<br>
+                <span class="hero-title-gradient">de Élite</span><br>
+                para Fútbol
+            </h1>
+            <p class="hero-subtitle">
+                La plataforma integral que conecta servicios médicos, fisioterapia, readaptación y análisis de
+                rendimiento.
+                Todo tu staff, todos tus datos, una sola herramienta.
+            </p>
+            <div class="hero-actions">
+                <a href="#pricing" class="btn btn-primary btn-lg">
+                    Empezar Ahora
+                </a>
+                <a href="#contact" class="btn btn-outline btn-lg">
+                    Contactar Ventas
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-value">+500</span>
+                    <span class="hero-stat-label">Jugadores gestionados</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">Personalizadas</span>
+                    <span class="hero-stat-label">Técnicas de tratamiento</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">4</span>
+                    <span class="hero-stat-label">Idiomas disponibles</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-mockup">
+            <img src="images/dashboard-main.png" alt="MedSoccer Pro Dashboard Principal" class="hero-mockup-img">
+        </div>
+        <div class="hero-scroll-indicator">
+            <i data-lucide="chevron-down" class="scroll-icon"></i>
+        </div>
+    </section>
+
+    <!-- ===================== TRUSTED BY / LOGOS ===================== -->
+    <section class="trusted-section">
+        <div class="container">
+            <p class="trusted-label">Compatible con las herramientas líderes del sector</p>
+            <div class="trusted-logos">
+                <div class="trusted-logo-item">
+                    <i data-lucide="radar" style="width:28px;height:28px"></i>
+                    <span>Catapult Sports</span>
+                </div>
+                <div class="trusted-logo-item">
+                    <i data-lucide="dumbbell" style="width:28px;height:28px"></i>
+                    <span>VALD Performance</span>
+                </div>
+                <div class="trusted-logo-item">
+                    <i data-lucide="shield-check" style="width:28px;height:28px"></i>
+                    <span>Supabase</span>
+                </div>
+                <div class="trusted-logo-item">
+                    <i data-lucide="cloud" style="width:28px;height:28px"></i>
+                    <span>Vercel</span>
+                </div>
+                <div class="trusted-logo-item">
+                    <i data-lucide="credit-card" style="width:28px;height:28px"></i>
+                    <span>Stripe</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FEATURES SECTION ===================== -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Funcionalidades</span>
+                <h2 class="section-title">Todo lo que tu staff médico necesita</h2>
+                <p class="section-subtitle">Desde el diagnóstico hasta la vuelta al terreno de juego. MedSoccer Pro
+                    cubre cada fase del proceso médico-deportivo.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon-wrapper">
+                        <i data-lucide="heart-pulse" class="feature-icon"></i>
+                    </div>
+                    <h3 class="feature-title">Dashboard Inteligente</h3>
+                    <p class="feature-desc">Vista panorámica con estadísticas en tiempo real. KPIs de lesiones, wellness
+                        del equipo, alertas de sobrecarga y disponibilidad de plantilla en un vistazo.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon-wrapper feature-icon-green">
+                        <i data-lucide="users" class="feature-icon"></i>
+                    </div>
+                    <h3 class="feature-title">Gestión de Jugadores</h3>
+                    <p class="feature-desc">Perfiles completos con estado de salud, historial de lesiones, alertas por
+                        sobrecarga, composición corporal y métricas de rendimiento individualizadas.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon-wrapper feature-icon-purple">
+                        <i data-lucide="stethoscope" class="feature-icon"></i>
+                    </div>
+                    <h3 class="feature-title">Fisioterapia Personalizada</h3>
+                    <p class="feature-desc">Registro avanzado de tratamientos con personalización total de técnicas,
+                        ejercicios terapéuticos y seguimiento detallado de la evolución en cada sesión.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon-wrapper feature-icon-orange">
+                        <i data-lucide="activity" class="feature-icon"></i>
+                    </div>
+                    <h3 class="feature-title">Readaptación y Prevención</h3>
+                    <p class="feature-desc">Constructor de sesiones con ejercicios personalizados por fases de
+                        microciclo. Protocolos RTP (Return to Play) y progresión de carga post-lesión.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon-wrapper feature-icon-red">
+                        <i data-lucide="bone" class="feature-icon"></i>
+                    </div>
+                    <h3 class="feature-title">Control de Recuperación</h3>
+                    <p class="feature-desc">Gestión de lesiones con personalización completa de las fases de
+                        recuperación
+                        y criterios objetivos de pase de fase para una vuelta al juego segura.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon-wrapper feature-icon-cyan">
+                        <i data-lucide="calendar-days" class="feature-icon"></i>
+                    </div>
+                    <h3 class="feature-title">Calendario Inteligente</h3>
+                    <p class="feature-desc">Vista mensual de tratamientos, sesiones de readaptación, consultas médicas y
+                        eventos. Sincronización automática con todo el equipo médico.</p>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon-wrapper feature-icon-teal">
+                        <i data-lucide="brain" class="feature-icon"></i>
+                    </div>
+                    <h3 class="feature-title">Wellness y RPE</h3>
+                    <p class="feature-desc">Control diario de bienestar (fatiga, sueño, estrés, dolor muscular).
+                        Monitoreo de carga interna con RPE y escala de Borg para prevención de lesiones.</p>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="feature-icon-wrapper feature-icon-indigo">
+                        <i data-lucide="gauge" class="feature-icon"></i>
+                    </div>
+                    <h3 class="feature-title">Valoraciones Físicas</h3>
+                    <p class="feature-desc">Test de fuerza, movilidad, rango articular y salto. Integración con
+                        dispositivos VALD (ForceFrame, ForceDecks) para datos objetivos de rendimiento.</p>
+                </div>
+
+                <!-- Feature 9 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="feature-icon-wrapper feature-icon-amber">
+                        <i data-lucide="file-text" class="feature-icon"></i>
+                    </div>
+                    <h3 class="feature-title">Informes Profesionales</h3>
+                    <p class="feature-desc">Exportación de informes PDF profesionales con marca del club. Resúmenes
+                        ejecutivos, evolución de lesiones y disponibilidad de plantilla para la directiva.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PLATFORM SECTION ===================== -->
+    <section id="platform" class="platform-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Plataforma</span>
+                <h2 class="section-title">Web + Móvil. Una sola plataforma.</h2>
+                <p class="section-subtitle">Accede desde cualquier dispositivo. Dashboard web para el staff y app móvil
+                    nativa para fisioterapeutas en el vestuario y jugadores en el campo.</p>
+            </div>
+
+            <div class="platform-showcase">
+                <div class="platform-card platform-web">
+                    <div class="platform-card-header">
+                        <div class="platform-card-icon">
+                            <i data-lucide="monitor" style="width:24px;height:24px"></i>
+                        </div>
+                        <h3>Dashboard Web</h3>
+                        <span class="platform-badge">Next.js 16</span>
+                    </div>
+                    <p class="platform-card-desc">Panel de control completo con dashboards, gestión de jugadores,
+                        calendario, integraciones GPS y analytics avanzados. Diseñado para el staff médico.</p>
+                    <img src="images/dashboard-main.png" alt="Dashboard Web MedSoccer Pro" class="platform-card-img">
+                    <ul class="platform-features-list">
+                        <li><i data-lucide="check" class="check-icon"></i> Dashboard en tiempo real</li>
+                        <li><i data-lucide="check" class="check-icon"></i> Gestión completa de plantilla</li>
+                        <li><i data-lucide="check" class="check-icon"></i> Integraciones GS/VALD</li>
+                        <li><i data-lucide="check" class="check-icon"></i> Informes PDF exportables</li>
+                        <li><i data-lucide="check" class="check-icon"></i> Calendario inteligente</li>
+                    </ul>
+                </div>
+                <div class="platform-card platform-mobile">
+                    <div class="platform-card-header">
+                        <div class="platform-card-icon">
+                            <i data-lucide="smartphone" style="width:24px;height:24px"></i>
+                        </div>
+                        <h3>App Móvil Nativa</h3>
+                        <span class="platform-badge platform-badge-green">iOS & Android</span>
+                    </div>
+                    <p class="platform-card-desc">App nativa con React Native para acceso desde el vestuario, campo de
+                        entrenamiento o en desplazamientos. Notificaciones push en tiempo real.</p>
+                    <img src="images/app-mobile.jpg" alt="App Móvil MedSoccer Pro"
+                        class="platform-card-img platform-mobile-img">
+                    <ul class="platform-features-list">
+                        <li><i data-lucide="check" class="check-icon"></i> Wellness diario (jugadores)</li>
+                        <li><i data-lucide="check" class="check-icon"></i> RPE post-entrenamiento</li>
+                        <li><i data-lucide="check" class="check-icon"></i> Rutinas de ejercicios</li>
+                        <li><i data-lucide="check" class="check-icon"></i> Notificaciones push</li>
+                        <li><i data-lucide="check" class="check-icon"></i> Perfil del jugador</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== DETAILED FEATURES ===================== -->
+    <section class="detail-section">
+        <div class="container">
+            <!-- Detail 1 - Injury Tracking -->
+            <div class="detail-row">
+                <div class="detail-text">
+                    <span class="section-tag">Seguimiento de Lesiones</span>
+                    <h2 class="detail-title">Control total de cada lesión</h2>
+                    <p class="detail-desc">Desde el momento del diagnóstico hasta la reincorporación al equipo. Cada
+                        lesión se gestiona con fases de recuperación codificadas por colores, timeline visual y
+                        seguimiento del dolor.</p>
+                    <div class="detail-features">
+                        <div class="detail-feature">
+                            <i data-lucide="shield" class="detail-feature-icon"></i>
+                            <div>
+                                <h4>Fases de Recuperación</h4>
+                                <p>Aguda, Subaguda, Funcional y Return to Play con protocolos personalizados para cada
+                                    fase.</p>
+                            </div>
+                        </div>
+                        <div class="detail-feature">
+                            <i data-lucide="trending-up" class="detail-feature-icon"></i>
+                            <div>
+                                <h4>Evolución en Tiempo Real</h4>
+                                <p>Gráficas de dolor, movilidad y fuerza que muestran la progresión del jugador durante
+                                    la recuperación.</p>
+                            </div>
+                        </div>
+                        <div class="detail-feature">
+                            <i data-lucide="bell" class="detail-feature-icon"></i>
+                            <div>
+                                <h4>Alertas Automáticas</h4>
+                                <p>Notificaciones de riesgo de recaída basadas en la carga de entrenamiento y datos de
+                                    wellness.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-image">
+                    <img src="images/injury-detail.png" alt="Sistema de seguimiento de lesiones y Mapa Anatómico"
+                        class="detail-img">
+                </div>
+            </div>
+
+            <!-- Detail 2 - Analytics -->
+            <div class="detail-row detail-row-reverse">
+                <div class="detail-text">
+                    <span class="section-tag">Análisis de Rendimiento</span>
+                    <h2 class="detail-title">Datos GPS y de rendimiento en un solo lugar</h2>
+                    <p class="detail-desc">Importa datos de Catapult Sports, VALD Performance y otros dispositivos GPS
+                        directamente a la plataforma. Visualiza métricas de carga externa, velocidad, sprints y mucho
+                        más.</p>
+                    <div class="detail-features">
+                        <div class="detail-feature">
+                            <i data-lucide="map-pin" class="detail-feature-icon"></i>
+                            <div>
+                                <h4>GPS Tracking</h4>
+                                <p>Distancia total, HSR, sprints, velocidad máxima, aceleraciones y deceleraciones en
+                                    cada sesión.</p>
+                            </div>
+                        </div>
+                        <div class="detail-feature">
+                            <i data-lucide="bar-chart-3" class="detail-feature-icon"></i>
+                            <div>
+                                <h4>ACWR (Ratio Aguda:Crónica)</h4>
+                                <p>Monitorización del ratio de carga aguda/crónica para detectar riesgos de lesión por
+                                    sobrecarga.</p>
+                            </div>
+                        </div>
+                        <div class="detail-feature">
+                            <i data-lucide="zap" class="detail-feature-icon"></i>
+                            <div>
+                                <h4>Force & Jump Analysis</h4>
+                                <p>Integración con ForceFrame y ForceDecks de VALD para tests de fuerza isométrica y
+                                    análisis de salto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-image">
+                    <img src="images/analytics-load.png" alt="Panel de análisis de rendimiento y carga de trabajo"
+                        class="detail-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== INTEGRATIONS SECTION ===================== -->
+    <section id="integrations" class="integrations-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Integraciones</span>
+                <h2 class="section-title">Conecta tus herramientas favoritas</h2>
+                <p class="section-subtitle">MedSoccer Pro se integra con los dispositivos y plataformas que tu equipo ya
+                    utiliza.</p>
+            </div>
+
+            <div class="integrations-grid">
+                <div class="integration-card">
+                    <div class="integration-icon-wrap">
+                        <i data-lucide="radar" class="integration-icon"></i>
+                    </div>
+                    <h3>Catapult Sports</h3>
+                    <p>Importación directa de datos GPS: distancia, player load, HSR, sprints y métricas biomecánicas.
+                    </p>
+                    <span class="integration-status integration-active">
+                        <i data-lucide="check-circle" style="width:14px;height:14px"></i> Integrado
+                    </span>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon-wrap integration-icon-green">
+                        <i data-lucide="dumbbell" class="integration-icon"></i>
+                    </div>
+                    <h3>VALD Performance</h3>
+                    <p>Sincronización con ForceFrame, ForceDecks y NordBord para tests de fuerza y análisis de salto.
+                    </p>
+                    <span class="integration-status integration-active">
+                        <i data-lucide="check-circle" style="width:14px;height:14px"></i> Integrado
+                    </span>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon-wrap integration-icon-purple">
+                        <i data-lucide="file-spreadsheet" class="integration-icon"></i>
+                    </div>
+                    <h3>Importación CSV/Excel</h3>
+                    <p>Importa plantillas de jugadores, datos de composición corporal y métricas desde hojas de cálculo.
+                    </p>
+                    <span class="integration-status integration-active">
+                        <i data-lucide="check-circle" style="width:14px;height:14px"></i> Integrado
+                    </span>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon-wrap integration-icon-orange">
+                        <i data-lucide="map" class="integration-icon"></i>
+                    </div>
+                    <h3>STATSports</h3>
+                    <p>Compatibilidad con dispositivos STATSports para importación de datos GPS y carga externa.</p>
+                    <span class="integration-status integration-soon">
+                        <i data-lucide="clock" style="width:14px;height:14px"></i> Próximamente
+                    </span>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon-wrap integration-icon-red">
+                        <i data-lucide="video" class="integration-icon"></i>
+                    </div>
+                    <h3>Hudl / Wyscout</h3>
+                    <p>Vinculación de sesiones de vídeo con datos de readaptación y análisis de rendimiento.</p>
+                    <span class="integration-status integration-soon">
+                        <i data-lucide="clock" style="width:14px;height:14px"></i> Próximamente
+                    </span>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon-wrap integration-icon-cyan">
+                        <i data-lucide="watch" class="integration-icon"></i>
+                    </div>
+                    <h3>Wearables</h3>
+                    <p>Conexión con Whoop, Oura Ring y Polar para métricas de recuperación y sueño de jugadores.</p>
+                    <span class="integration-status integration-soon">
+                        <i data-lucide="clock" style="width:14px;height:14px"></i> Próximamente
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== ROLES SECTION ===================== -->
+    <section class="roles-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Roles y Permisos</span>
+                <h2 class="section-title">Diseñado para cada miembro del staff</h2>
+                <p class="section-subtitle">Sistema de permisos granular que garantiza que cada usuario acceda
+                    exactamente a lo que necesita.</p>
+            </div>
+
+            <div class="roles-grid">
+                <div class="role-card role-admin">
+                    <div class="role-header">
+                        <div class="role-icon-wrap">
+                            <i data-lucide="crown" class="role-icon"></i>
+                        </div>
+                        <h3>Administrador</h3>
+                        <span class="role-badge">Acceso Total</span>
+                    </div>
+                    <ul class="role-perms">
+                        <li><i data-lucide="check" class="perm-icon"></i> Gestión completa del sistema</li>
+                        <li><i data-lucide="check" class="perm-icon"></i> Administración de usuarios</li>
+                        <li><i data-lucide="check" class="perm-icon"></i> Configuración del club</li>
+                        <li><i data-lucide="check" class="perm-icon"></i> Todos los informes y datos</li>
+                        <li><i data-lucide="check" class="perm-icon"></i> Integraciones y API</li>
+                    </ul>
+                </div>
+                <div class="role-card role-physio">
+                    <div class="role-header">
+                        <div class="role-icon-wrap role-icon-green">
+                            <i data-lucide="stethoscope" class="role-icon"></i>
+                        </div>
+                        <h3>Fisioterapeuta</h3>
+                        <span class="role-badge role-badge-green">Staff Médico</span>
+                    </div>
+                    <ul class="role-perms">
+                        <li><i data-lucide="check" class="perm-icon"></i> Ver todos los jugadores</li>
+                        <li><i data-lucide="check" class="perm-icon"></i> Crear y editar tratamientos</li>
+                        <li><i data-lucide="check" class="perm-icon"></i> Gestión de lesiones</li>
+                        <li><i data-lucide="check" class="perm-icon"></i> Historial médico completo</li>
+                        <li><i data-lucide="x" class="perm-icon perm-denied"></i> Gestión de usuarios</li>
+                    </ul>
+                </div>
+                <div class="role-card role-trainer">
+                    <div class="role-header">
+                        <div class="role-icon-wrap role-icon-blue">
+                            <i data-lucide="activity" class="role-icon"></i>
+                        </div>
+                        <h3>Readaptador</h3>
+                        <span class="role-badge role-badge-blue">Rendimiento</span>
+                    </div>
+                    <ul class="role-perms">
+                        <li><i data-lucide="check" class="perm-icon"></i> Diseño de sesiones RTP</li>
+                        <li><i data-lucide="check" class="perm-icon"></i> Control de cargas post-lesión</li>
+                        <li><i data-lucide="check" class="perm-icon"></i> Criterios de pase de fase</li>
+                        <li><i data-lucide="check" class="perm-icon"></i> Test y valoraciones físicas</li>
+                        <li><i data-lucide="x" class="perm-icon perm-denied"></i> Historial médico privado</li>
+                    </ul>
+                </div>
+                <div class="role-card role-player">
+                    <div class="role-header">
+                        <div class="role-icon-wrap role-icon-orange">
+                            <i data-lucide="user" class="role-icon"></i>
+                        </div>
+                        <h3>Jugador</h3>
+                        <span class="role-badge role-badge-orange">Acceso Personal</span>
+                    </div>
+                    <ul class="role-perms">
+                        <li><i data-lucide="check" class="perm-icon"></i> Ver su propio perfil</li>
+                        <li><i data-lucide="check" class="perm-icon"></i> Completar wellness diario</li>
+                        <li><i data-lucide="check" class="perm-icon"></i> Ver sesiones asignadas</li>
+                        <li><i data-lucide="check" class="perm-icon"></i> Registrar RPE</li>
+                        <li><i data-lucide="x" class="perm-icon perm-denied"></i> Ver otros jugadores</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECURITY SECTION ===================== -->
+    <section class="security-section">
+        <div class="container">
+            <div class="security-content">
+                <div class="security-text">
+                    <span class="section-tag">Seguridad</span>
+                    <h2 class="detail-title">Tus datos médicos, protegidos al máximo nivel</h2>
+                    <p class="detail-desc">MedSoccer Pro implementa las mejores prácticas de seguridad para proteger la
+                        información médica sensible de jugadores y clubs.</p>
+
+                    <div class="security-features">
+                        <div class="security-feature">
+                            <i data-lucide="lock" class="security-icon"></i>
+                            <div>
+                                <h4>Row Level Security</h4>
+                                <p>Cada usuario solo accede a los datos que le corresponden. Protección a nivel de base
+                                    de datos.</p>
+                            </div>
+                        </div>
+                        <div class="security-feature">
+                            <i data-lucide="fingerprint" class="security-icon"></i>
+                            <div>
+                                <h4>Autenticación 2FA</h4>
+                                <p>Autenticación de dos factores y soporte para WebAuthn (biometría y llaves de
+                                    seguridad).</p>
+                            </div>
+                        </div>
+                        <div class="security-feature">
+                            <i data-lucide="scroll-text" class="security-icon"></i>
+                            <div>
+                                <h4>Logs de Auditoría</h4>
+                                <p>Registro detallado de quién accedió a qué datos y cuándo. Compliance GDPR integrado.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="security-feature">
+                            <i data-lucide="globe" class="security-icon"></i>
+                            <div>
+                                <h4>Multi-tenant Aislado</h4>
+                                <p>Cada club tiene su propia instancia aislada con datos completamente separados y
+                                    seguros.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="security-visual">
+                    <div class="security-shield">
+                        <i data-lucide="shield-check" class="shield-icon"></i>
+                        <div class="shield-rings">
+                            <div class="shield-ring ring-1"></div>
+                            <div class="shield-ring ring-2"></div>
+                            <div class="shield-ring ring-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PRICING SECTION ===================== -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Precios</span>
+                <h2 class="section-title">Un plan para cada club</h2>
+                <p class="section-subtitle">Desde equipos de cantera hasta clubs de primera división. Elige el plan que
+                    mejor se adapte a tus necesidades.</p>
+            </div>
+
+            <div class="pricing-toggle">
+                <span class="pricing-toggle-label active" id="monthlyLabel">Mensual</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="pricingToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="pricing-toggle-label" id="annualLabel">Anual <span class="pricing-save">-10% PAGO
+                        ÚNICO</span></span>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Básico Plan -->
+                <div class="pricing-card" data-aos="fade-up">
+                    <div class="pricing-card-header">
+                        <h3>Básico</h3>
+                        <p class="pricing-card-desc">Para equipos individuales y canteras</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="pricing-currency">€</span>
+                        <span class="pricing-amount" data-monthly="89" data-annual="960">89</span>
+                        <span class="pricing-period">/mes</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check" class="pricing-check"></i> Hasta 25 jugadores</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> 1 equipo</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> 2 usuarios del staff</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> Gestión de lesiones</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> Wellness con CSV</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> Calendario básico</li>
+                        <li class="pricing-feature-disabled"><i data-lucide="x" class="pricing-x"></i> Integraciones GPS
+                        </li>
+                        <li class="pricing-feature-disabled"><i data-lucide="x" class="pricing-x"></i> Análisis Avanzado
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-block">Elegir Plan</a>
+                </div>
+
+                <!-- Avanzado Plan -->
+                <div class="pricing-card pricing-card-featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-popular-badge">Recomendado</div>
+                    <div class="pricing-card-header">
+                        <h3>Avanzado</h3>
+                        <p class="pricing-card-desc">Para clubes profesionales en crecimiento</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="pricing-currency">€</span>
+                        <span class="pricing-amount" data-monthly="150" data-annual="1620">150</span>
+                        <span class="pricing-period">/mes</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check" class="pricing-check"></i> Hasta 50 jugadores</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> 2 equipos</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> 6 usuarios del staff</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> Dashboard avanzado</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> Análisis médico y CPK</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> Registro de valoraciones</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> Gestión multi-equipo</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-block">Elegir Plan</a>
+                </div>
+
+                <!-- Profesional Plan -->
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card-header">
+                        <h3>Profesional</h3>
+                        <p class="pricing-card-desc">Para clubs de élite y alto rendimiento</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="pricing-currency">€</span>
+                        <span class="pricing-amount" data-monthly="400" data-annual="4320">400</span>
+                        <span class="pricing-period">/mes</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check" class="pricing-check"></i> Hasta 150 jugadores</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> 6 equipos</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> 25 usuarios del staff</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> Módulo de Nutrición</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> Integración VALD e Integraciones API</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> App móvil para jugadores</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> API REST pública</li>
+                        <li><i data-lucide="check" class="pricing-check"></i> Soporte personalizado</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-block">Elegir Plan</a>
+                </div>
+            </div>
+
+            <p class="pricing-note">Precios sin IVA. El plan anual se realiza mediante <strong>pago único</strong> con
+                un 10% de descuento incluido. Sin compromiso de permanencia en planes mensuales.</p>
+        </div>
+    </section>
+
+
+
+    <!-- ===================== TESTIMONIAL / CTA SECTION ===================== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-quote">
+                    <i data-lucide="quote" class="cta-quote-icon"></i>
+                    <blockquote>
+                        "MedSoccer Pro ha transformado la forma en que gestionamos la salud de nuestros jugadores. Tener
+                        toda la información médica, tratamientos y datos de rendimiento en una sola plataforma nos ha
+                        permitido tomar mejores decisiones y reducir significativamente los tiempos de recuperación."
+                    </blockquote>
+                    <div class="cta-author">
+                        <div class="cta-author-avatar">
+                            <i data-lucide="user-circle" style="width:48px;height:48px"></i>
+                        </div>
+                        <div>
+                            <strong>Dr. Manuel García</strong>
+                            <span>Jefe de los Servicios Médicos — Club Elite Sports</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-action">
+                    <h2>¿Listo para elevar la gestión médica de tu club?</h2>
+                    <p>Únete a los clubes que ya confían en MedSoccer Pro para cuidar de sus jugadores.</p>
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        <i data-lucide="rocket" class="btn-icon"></i>
+                        Contactar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TECH STACK SECTION ===================== -->
+    <section class="tech-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tecnología</span>
+                <h2 class="section-title">Construido con tecnología de vanguardia</h2>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon-wrap">
+                        <i data-lucide="hexagon" style="width:28px;height:28px"></i>
+                    </div>
+                    <h4>Next.js 16</h4>
+                    <p>Framework React de última generación</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrap">
+                        <i data-lucide="smartphone" style="width:28px;height:28px"></i>
+                    </div>
+                    <h4>React Native</h4>
+                    <p>App nativa para iOS y Android</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrap">
+                        <i data-lucide="database" style="width:28px;height:28px"></i>
+                    </div>
+                    <h4>Supabase</h4>
+                    <p>PostgreSQL + Auth + Storage</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrap">
+                        <i data-lucide="palette" style="width:28px;height:28px"></i>
+                    </div>
+                    <h4>Tailwind CSS</h4>
+                    <p>Diseño moderno y responsive</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrap">
+                        <i data-lucide="cloud" style="width:28px;height:28px"></i>
+                    </div>
+                    <h4>Vercel</h4>
+                    <p>Deploy global con edge network</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrap">
+                        <i data-lucide="code-2" style="width:28px;height:28px"></i>
+                    </div>
+                    <h4>TypeScript</h4>
+                    <p>Tipado estricto y seguro</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT / FOOTER ===================== -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Hablemos sobre tu club</h2>
+                    <p>Cuéntanos sobre tus necesidades y te preparamos una propuesta personalizada.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i data-lucide="mail" class="contact-icon"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:info@medsoccerpro.com">info@medsoccerpro.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i data-lucide="phone" class="contact-icon"></i>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <a href="tel:+34600000000">+34 600 000 000</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i data-lucide="map-pin" class="contact-icon"></i>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <span>A Coruña, España</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="club">Club / Organización</label>
+                            <input type="text" id="club" name="club" placeholder="Nombre del club">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="plan">Plan de interés</label>
+                        <select id="plan" name="plan">
+                            <option value="">Selecciona un plan</option>
+                            <option value="basico">Básico — €89/mes</option>
+                            <option value="avanzado">Avanzado — €150/mes</option>
+                            <option value="profesional">Profesional — €400/mes</option>
+                            <option value="custom">Personalizado / Club Élite</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Cuéntanos sobre tus necesidades..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">
+                        <i data-lucide="send" class="btn-icon"></i>
+                        Enviar Solicitud
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="MedSoccer Pro" class="footer-logo-img">
+                        <span>MedSoccer <span class="nav-logo-pro">Pro</span></span>
+                    </div>
+                    <p>Plataforma profesional de gestión médica y rendimiento para clubes de fútbol. Conectando la
+                        medicina deportiva con la tecnología.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin"
+                                style="width:20px;height:20px"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter"
+                                style="width:20px;height:20px"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram"
+                                style="width:20px;height:20px"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i data-lucide="youtube"
+                                style="width:20px;height:20px"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="#features">Funcionalidades</a></li>
+                        <li><a href="#platform">Plataforma</a></li>
+                        <li><a href="#integrations">Integraciones</a></li>
+                        <li><a href="#pricing">Precios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#contact">Contactar</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Documentación</a></li>
+                        <li><a href="#">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Uso</a></li>
+                        <li><a href="#">GDPR</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MedSoccer Pro. Todos los derechos reservados.</p>
+                <p>Desarrollado con ❤️ para profesionales del fútbol</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
