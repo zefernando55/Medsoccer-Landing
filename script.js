@@ -142,29 +142,58 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
 
-        // Show success feedback
         const btn = contactForm.querySelector('button[type="submit"]');
         const originalText = btn.innerHTML;
 
-        btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> ¡Solicitud Enviada!';
-        btn.style.background = '#10B981';
-        btn.style.borderColor = '#10B981';
-        btn.style.boxShadow = '0 4px 24px rgba(16, 185, 129, 0.25)';
+        // Mostrar estado de carga
+        btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="spin"><circle cx="12" cy="12" r="10"></circle><path d="M12 2v4"></path></svg> Enviando...';
         btn.disabled = true;
 
-        setTimeout(() => {
-            btn.innerHTML = originalText;
-            btn.style.background = '';
-            btn.style.borderColor = '';
-            btn.style.boxShadow = '';
-            btn.disabled = false;
-            contactForm.reset();
+        fetch("https://formsubmit.co/ajax/info@medsoccerpro.com", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(data => {
+                // Mostrar estado de éxito
+                btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> ¡Solicitud Enviada!';
+                btn.style.background = '#10B981';
+                btn.style.borderColor = '#10B981';
+                btn.style.boxShadow = '0 4px 24px rgba(16, 185, 129, 0.25)';
 
-            // Re-init lucide icons for the button
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        }, 3000);
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '';
+                    btn.style.borderColor = '';
+                    btn.style.boxShadow = '';
+                    btn.disabled = false;
+                    contactForm.reset();
+
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+                }, 3000);
+            })
+            .catch(error => {
+                console.error('Error enviando formulario:', error);
+                btn.innerHTML = 'Error al enviar';
+                btn.style.background = '#EF4444';
+                btn.style.borderColor = '#EF4444';
+
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '';
+                    btn.style.borderColor = '';
+                    btn.disabled = false;
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+                }, 3000);
+            });
     });
 
     // ---- Parallax Effect on Hero Background ----
