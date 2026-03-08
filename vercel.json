@@ -2,7 +2,7 @@
     "redirects": [
         {
             "source": "/app",
-            "destination": "https://medsoccer-pro-zefernando55-9081s-projects.vercel.app",
+            "destination": "https://app.medsoccerpro.com",
             "permanent": false
         }
     ]
