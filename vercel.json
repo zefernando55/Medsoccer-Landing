@@ -1,0 +1,9 @@
+{
+    "redirects": [
+        {
+            "source": "/app",
+            "destination": "https://medsoccer-pro-zefernando55-9081s-projects.vercel.app",
+            "permanent": false
+        }
+    ]
+}

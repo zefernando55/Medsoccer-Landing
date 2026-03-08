@@ -181,6 +181,23 @@ ul {
     height: 18px;
 }
 
+.nav-link-app {
+    background: var(--primary);
+    color: var(--white) !important;
+    padding: 8px 20px !important;
+    border-radius: var(--radius-full);
+    font-weight: 700 !important;
+    box-shadow: var(--shadow-blue);
+    margin-left: 10px;
+}
+
+.nav-link-app:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-blue-lg);
+}
+
+
 
 /* ============================================
    NAVIGATION
