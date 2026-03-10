@@ -243,6 +243,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---- Language Selector Logic ----
     const langBtn = document.getElementById('langBtn');
     const langDropdown = document.getElementById('langDropdown');
+    const langFlag = document.getElementById('langFlag');
+    const langLabel = document.getElementById('langLabel');
+
+    // Read cookie to set initial UI
+    const getCookie = (name) => {
+        const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        if (match) return match[2];
+        return null;
+    };
+    
+    const currentTrans = getCookie('googtrans');
+    if (currentTrans && langFlag && langLabel) {
+        const langCode = currentTrans.split('/').pop();
+        if (langCode === 'en') { langFlag.textContent = '🇬🇧'; langLabel.textContent = 'EN'; }
+        else if (langCode === 'fr') { langFlag.textContent = '🇫🇷'; langLabel.textContent = 'FR'; }
+        else if (langCode === 'ru') { langFlag.textContent = '🇷🇺'; langLabel.textContent = 'RU'; }
+        else { langFlag.textContent = '🇪🇸'; langLabel.textContent = 'ES'; }
+    }
 
     if (langBtn && langDropdown) {
         langBtn.addEventListener('click', (e) => {
@@ -260,27 +278,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Global function to be called from inlineonclick
 window.changeLanguage = function(langCode, flag, label) {
-    const langFlag = document.getElementById('langFlag');
-    const langLabel = document.getElementById('langLabel');
-    const langDropdown = document.getElementById('langDropdown');
-
-    if (langFlag) langFlag.textContent = flag;
-    if (langLabel) langLabel.textContent = label;
-    if (langDropdown) langDropdown.classList.remove('open');
-
-    // Find the Google Translate combo box and dispatch change
-    const select = document.querySelector('.goog-te-combo');
-    if (select) {
-        select.value = langCode;
-        select.dispatchEvent(new Event('change'));
+    const domain = window.location.hostname;
+    
+    if (langCode === 'es') {
+        // Clear cookies for Spanish (original)
+        document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+        document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${domain}`;
     } else {
-        // If it hasn't loaded yet, try again in a bit or set a cookie
-        setTimeout(() => {
-            const retrySelect = document.querySelector('.goog-te-combo');
-            if (retrySelect) {
-                retrySelect.value = langCode;
-                retrySelect.dispatchEvent(new Event('change'));
-            }
-        }, 1000);
+        // Set cookies for translation
+        document.cookie = `googtrans=/es/${langCode}; path=/;`;
+        document.cookie = `googtrans=/es/${langCode}; path=/; domain=${domain}`;
     }
+    
+    window.location.reload();
 };
