@@ -35,6 +35,19 @@
                 <a href="/app" class="nav-link nav-link-app" target="_blank">Acceso App <i data-lucide="external-link"
                         style="width:14px;height:14px;display:inline;margin-bottom:-2px;margin-left:2px"></i></a>
                 <a href="index.html#contact" class="nav-link nav-link-cta">Contactar</a>
+                <div class="lang-selector-container">
+                    <button id="langBtn" class="lang-btn light-mode">
+                        <span id="langFlag">🇪🇸</span>
+                        <span id="langLabel">ES</span>
+                        <i data-lucide="chevron-down" class="lang-icon"></i>
+                    </button>
+                    <div id="langDropdown" class="lang-dropdown">
+                        <button class="lang-opt" onclick="changeLanguage('es', '🇪🇸', 'ES')"><span>🇪🇸</span> ES</button>
+                        <button class="lang-opt" onclick="changeLanguage('en', '🇬🇧', 'EN')"><span>🇬🇧</span> EN</button>
+                        <button class="lang-opt" onclick="changeLanguage('fr', '🇫🇷', 'FR')"><span>🇫🇷</span> FR</button>
+                        <button class="lang-opt" onclick="changeLanguage('ru', '🇷🇺', 'RU')"><span>🇷🇺</span> RU</button>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -113,6 +126,19 @@
     <script>
         lucide.createIcons();
     </script>
-</body>
+    <script src="script.js"></script>
 
+    <!-- Google Translate Element (Hidden) -->
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'es,en,fr,ru',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
 </html>

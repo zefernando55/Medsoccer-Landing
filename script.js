@@ -239,4 +239,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.5 });
 
     statValues.forEach(stat => counterObserver.observe(stat));
+
+    // ---- Language Selector Logic ----
+    const langBtn = document.getElementById('langBtn');
+    const langDropdown = document.getElementById('langDropdown');
+
+    if (langBtn && langDropdown) {
+        langBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('open');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+                langDropdown.classList.remove('open');
+            }
+        });
+    }
 });
+
+// Global function to be called from inlineonclick
+window.changeLanguage = function(langCode, flag, label) {
+    const langFlag = document.getElementById('langFlag');
+    const langLabel = document.getElementById('langLabel');
+    const langDropdown = document.getElementById('langDropdown');
+
+    if (langFlag) langFlag.textContent = flag;
+    if (langLabel) langLabel.textContent = label;
+    if (langDropdown) langDropdown.classList.remove('open');
+
+    // Find the Google Translate combo box and dispatch change
+    const select = document.querySelector('.goog-te-combo');
+    if (select) {
+        select.value = langCode;
+        select.dispatchEvent(new Event('change'));
+    } else {
+        // If it hasn't loaded yet, try again in a bit or set a cookie
+        setTimeout(() => {
+            const retrySelect = document.querySelector('.goog-te-combo');
+            if (retrySelect) {
+                retrySelect.value = langCode;
+                retrySelect.dispatchEvent(new Event('change'));
+            }
+        }, 1000);
+    }
+};
