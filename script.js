@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="spin"><circle cx="12" cy="12" r="10"></circle><path d="M12 2v4"></path></svg> Enviando...';
         btn.disabled = true;
 
-        fetch("https://formsubmit.co/ajax/info@medsoccerpro.com", {
+        fetch("https://formsubmit.co/ajax/db3a2cacc03b7e151671030b64e29f28", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
