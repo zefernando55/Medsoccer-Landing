@@ -149,7 +149,12 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="spin"><circle cx="12" cy="12" r="10"></circle><path d="M12 2v4"></path></svg> Enviando...';
         btn.disabled = true;
 
-        fetch("https://formsubmit.co/ajax/db3a2cacc03b7e151671030b64e29f28", {
+        // Añadir campos de control de FormSubmit
+        data['_captcha'] = 'false';
+        data['_subject'] = 'Nueva solicitud de información: MedSoccer Pro';
+        data['_template'] = 'table';
+
+        fetch("https://formsubmit.co/ajax/info@medsoccerpro.com", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -157,7 +162,10 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             body: JSON.stringify(data)
         })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) throw new Error('Error en el envío');
+                return response.json();
+            })
             .then(data => {
                 // Mostrar estado de éxito
                 btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> ¡Solicitud Enviada!';
