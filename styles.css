@@ -2196,3 +2196,106 @@ ul {
 body { top: 0 !important; }
 .skiptranslate, .goog-te-banner-frame { display: none !important; }
 #google_translate_element { display: none !important; }
+
+/* --- INSTITUTIONAL SECTION --- */
+.institutional-section {
+    background-color: #050b14;
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.institutional-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 85, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.institutional-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.institutional-tag {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    padding: 8px 24px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #a0aec0;
+    margin-bottom: 40px;
+}
+
+.institutional-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 60px;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+.institutional-highlight {
+    background: linear-gradient(90deg, #0055FF, #00C6FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.institutional-logo-box {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.powered-by-small {
+    font-size: 0.85rem;
+    color: #a0aec0;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+.institutional-badge {
+    height: 140px;
+    width: auto;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+}
+
+.institutional-dic-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+@media (max-width: 768px) {
+    .institutional-logo-box {
+        padding: 40px 30px;
+        width: 100%;
+    }
+}
